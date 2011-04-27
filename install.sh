@@ -46,7 +46,7 @@ append_into ". $path/.bash_aliases" ~/.bash_aliases
 
 #copy "$path/local" ~/local
 
-#copy "$path/.gitconfig" ~/.gitconfig
+copy "$path/.gitconfig" ~/.gitconfig
 #copy "$path/.gvimrc" ~/.gvimrc
 #copy "$path/.screenrc" ~/.screenrc
 #copy "$path/.vim" ~/.vim
