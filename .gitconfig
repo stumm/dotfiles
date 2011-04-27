@@ -1,0 +1,41 @@
+[user]
+    name = Christopher Stumm
+    email = christopher@stumm.ca
+
+[alias]
+    last = log -1 HEAD
+    serve = daemon --reuseaddr --base-path=. --export-all --verbose --enable=receive-pack
+
+    diff2 = diff --color-words --ignore-all-space --patience
+    log2 = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+
+    deploy = "!merge(){ git checkout $2 && git merge $1 && git push $2 && git checkout ${1#refs/heads/}; }; merge $(git symbolic-ref HEAD) $1"
+
+[color]
+    ui = auto
+
+[color "branch"]
+    current = yellow reverse
+    local = yellow
+    remote = green
+    plain = blue
+
+[color "diff"]
+    plain = normal
+    meta = yellow
+    frag = magenta
+    old = red
+    new = green
+    commit = cyan
+    whitespace = yellow red
+
+[color "status"]
+    header = blue
+    added = green
+    changed = yellow
+    untracked = cyan
+    nobranch = red
+
+[branch "master"]
+    remote = origin
+    merge = refs/heads/master
